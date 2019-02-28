@@ -3,11 +3,9 @@
 This is an example repository intended to show how to migrate from one framework to another framework. The approach is
 to layer each framework on a middleware, using Zend Stratigility, Zend Diactoros and Zend HttpHandlerRunner.
 
-**https://docs.zendframework.com/zend-httphandlerrunner/**
-
-**https://docs.zendframework.com/zend-diactoros/**
-
-**https://docs.zendframework.com/zend-stratigility/**
+* **[Zend Stratigility](https://docs.zendframework.com/zend-stratigility/)** in order to build the middlewares pipe.
+* **[Zend HttpHandlerRunner](https://docs.zendframework.com/zend-httphandlerrunner/)** in order to run the middleware pipe.
+* **[Zend Diactoros](https://docs.zendframework.com/zend-diactoros/)** as PSR-7 implementation.
 
 ## How to run
 
