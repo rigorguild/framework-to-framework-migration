@@ -1,0 +1,697 @@
+2019/02/27 09:32:27 [error] [exception.Error] Error: Call to undefined method OldYii::app() in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/protected/views/site/index.php:4
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CBaseController.php(126): require()
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/christia...', NULL, true)
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(872): CBaseController->renderFile('/Users/christia...', NULL, true)
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/protected/controllers/SiteController.php(32): CController->render('index')
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(282): CController->run('')
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#20 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#21 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#22 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#23 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#24 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#25 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#26 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#27 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(46): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#28 {main}
+REQUEST_URI=/
+---
+2019/02/27 22:23:56 [error] [exception.Error] Error: Call to undefined method OldYii::app() in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/protected/views/site/index.php:4
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CBaseController.php(126): require()
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/christia...', NULL, true)
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(872): CBaseController->renderFile('/Users/christia...', NULL, true)
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/protected/controllers/SiteController.php(32): CController->render('index')
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(282): CController->run('')
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#20 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#21 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#22 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#23 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#24 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#25 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#26 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#27 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(46): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#28 {main}
+REQUEST_URI=/
+---
+2019/02/27 22:55:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(59): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/site/contact
+---
+2019/02/27 22:56:05 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "fssafasfsaf". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('fssafasfsaf')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(59): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/fssafasfsaf
+---
+2019/02/27 23:00:08 [error] [exception.CException] CException: Yii1Controller cannot find the requested view "index". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php:881
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/protected/controllers/Yii1Controller.php(32): CController->render('index')
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/actions/CInlineAction.php(49): Yii1Controller->actionIndex()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('yii1')
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(59): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#20 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#21 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#22 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#23 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#24 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#25 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#26 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#27 {main}
+REQUEST_URI=/yii1
+---
+2019/02/27 23:00:39 [error] [exception.CException] CException: Yii1Controller cannot find the requested view "index". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php:881
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(785): CController->renderPartial('index', NULL, true)
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/protected/controllers/Yii1Controller.php(32): CController->render('index')
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/actions/CInlineAction.php(49): Yii1Controller->actionIndex()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('yii1')
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(59): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#20 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#21 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#22 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#23 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#24 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#25 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#26 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#27 {main}
+REQUEST_URI=/yii1
+---
+2019/02/27 23:01:32 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(59): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:02:07 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(59): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:04:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(59): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:05:56 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(59): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:06:53 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(59): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:09:21 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:09:59 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:10:37 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:12:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:14:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:14:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:16:30 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "yii2". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('yii2')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/yii2
+---
+2019/02/27 23:16:50 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "yii2". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('yii2')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/yii2
+---
+2019/02/27 23:16:53 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/27 23:16:53 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "favicon.ico". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/28 08:12:54 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/28 08:12:54 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/28 08:17:50 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "css/site.css". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('css/site.css')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/css/site.css
+HTTP_REFERER=https://127.0.0.1:8000/yii2
+---
+2019/02/28 09:01:46 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "test". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('test')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/test
+---
+2019/02/28 09:02:25 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "test". in /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/web/CWebApplication.php(141): CWebApplication->runController('test')
+#1 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/YiiMiddleware.php(57): CApplication->run()
+#3 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\YiiMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#4 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/Yii2Middleware.php(60): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#5 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\Yii2Middleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#6 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(52): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#7 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/WrappedListener.php(111): App\Middleware\SymfonyMiddleware->App\Middleware\{closure}(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher))
+#8 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(212): Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke(Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent), 'kernel.exceptio...', Object(Symfony\Component\EventDispatcher\EventDispatcher))
+#9 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/EventDispatcher.php(44): Symfony\Component\EventDispatcher\EventDispatcher->doDispatch(Array, 'kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#10 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php(145): Symfony\Component\EventDispatcher\EventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#11 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(221): Symfony\Component\EventDispatcher\Debug\TraceableEventDispatcher->dispatch('kernel.exceptio...', Object(Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent))
+#12 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/HttpKernel.php(78): Symfony\Component\HttpKernel\HttpKernel->handleException(Object(Symfony\Component\HttpKernel\Exception\NotFoundHttpException), Object(Symfony\Component\HttpFoundation\Request), 1)
+#13 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/symfony/http-kernel/Kernel.php(198): Symfony\Component\HttpKernel\HttpKernel->handle(Object(Symfony\Component\HttpFoundation\Request), 1, true)
+#14 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/src/Middleware/SymfonyMiddleware.php(62): Symfony\Component\HttpKernel\Kernel->handle(Object(Symfony\Component\HttpFoundation\Request))
+#15 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/Next.php(52): App\Middleware\SymfonyMiddleware->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\Next))
+#16 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(83): Zend\Stratigility\Next->handle(Object(Zend\Diactoros\ServerRequest))
+#17 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-stratigility/src/MiddlewarePipe.php(72): Zend\Stratigility\MiddlewarePipe->process(Object(Zend\Diactoros\ServerRequest), Object(Zend\Stratigility\EmptyPipelineHandler))
+#18 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/vendor/zendframework/zend-httphandlerrunner/src/RequestHandlerRunner.php(95): Zend\Stratigility\MiddlewarePipe->handle(Object(Zend\Diactoros\ServerRequest))
+#19 /Users/christian/workspace/php/rigorsquad/planetahuerto-poc-symfony/public/index.php(48): Zend\HttpHandlerRunner\RequestHandlerRunner->run()
+#20 {main}
+REQUEST_URI=/test
+---
