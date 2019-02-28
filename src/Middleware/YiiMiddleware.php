@@ -54,7 +54,16 @@ final class YiiMiddleware implements MiddlewareInterface
         \ob_start();
 
         require_once $yii;
-        \OldYii::createWebApplication($config)->run();
+        
+        try {
+            \OldYii::createWebApplication($config)->run();
+        } catch (\CHttpException $exception) {
+            if (404 === $exception->statusCode) {
+                return $handler->handle($request);
+            }
+            
+            throw $exception;
+        }
 
         $headers = \headers_list();
         \header_remove();

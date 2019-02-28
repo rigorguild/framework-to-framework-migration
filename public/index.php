@@ -29,6 +29,7 @@ $pipe = new Zend\Stratigility\MiddlewarePipe();
 $pipe->pipe(new App\Middleware\SymfonyMiddleware($_SERVER['APP_ENV'], (bool)$_SERVER['APP_DEBUG']));
 $pipe->pipe(new App\Middleware\Yii2Middleware($_SERVER['APP_ENV'], (bool)$_SERVER['APP_DEBUG'], $responseFactory));
 $pipe->pipe(new App\Middleware\YiiMiddleware((bool)$_SERVER['APP_DEBUG'], $responseFactory));
+$pipe->pipe(new App\Middleware\NotFoundMiddleware($responseFactory));
 
 $emitterStack = new Zend\HttpHandlerRunner\Emitter\EmitterStack();
 $emitterStack->push(new Zend\HttpHandlerRunner\Emitter\SapiEmitter());
