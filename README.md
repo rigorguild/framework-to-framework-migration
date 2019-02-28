@@ -18,4 +18,4 @@ to layer each framework on a middleware, using Zend Stratigility, Zend Diactoros
 
 * _/symfony_ -> Served by Symfony through `App\Middleware\SymfonyMiddleware`
 * _/yii1_ -> Served by Yii 1.1 version through `App\Middleware\YiiMiddleware`
-* -/yii2_ -> Served by Yii 2 version through `App\Middleware\Yii2Middleware` 
+* _/yii2_ -> Served by Yii 2 version through `App\Middleware\Yii2Middleware` 
