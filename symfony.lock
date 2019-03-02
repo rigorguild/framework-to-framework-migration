@@ -68,11 +68,32 @@
     "fzaninotto/faker": {
         "version": "v1.8.0"
     },
+    "guzzlehttp/psr7": {
+        "version": "1.5.2"
+    },
+    "intervention/image": {
+        "version": "2.4.2"
+    },
+    "league/flysystem": {
+        "version": "1.0.50"
+    },
+    "league/flysystem-memory": {
+        "version": "1.0.1"
+    },
+    "league/glide": {
+        "version": "1.4.0"
+    },
+    "league/glide-symfony": {
+        "version": "1.0.3"
+    },
     "nikic/php-parser": {
         "version": "v4.2.1"
     },
     "phpspec/php-diff": {
         "version": "v1.1.0"
+    },
+    "pimple/pimple": {
+        "version": "v3.2.3"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -98,6 +119,9 @@
     "psr/simple-cache": {
         "version": "1.0.1"
     },
+    "ralouphie/getallheaders": {
+        "version": "2.0.5"
+    },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
         "recipe": {
@@ -109,6 +133,9 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "silex/silex": {
+        "version": "v2.3.0"
     },
     "swiftmailer/swiftmailer": {
         "version": "v6.1.3"

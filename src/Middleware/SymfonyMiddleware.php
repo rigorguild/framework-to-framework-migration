@@ -49,9 +49,9 @@ final class SymfonyMiddleware implements MiddlewareInterface
             'kernel.exception',
             function (GetResponseForExceptionEvent $event) use ($request, $handler, $httpFoundationFactory): void {
                 if ($event->getException() instanceof NotFoundHttpException) {
+                    $event->allowCustomResponseCode();
                     $psr7Response = $handler->handle($request);
                     $response = $httpFoundationFactory->createResponse($psr7Response);
-                    $response->headers->set('X-Status-Code', $response->getStatusCode());
                     $event->setResponse($response);
                 }
             }

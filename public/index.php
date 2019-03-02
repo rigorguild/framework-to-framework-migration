@@ -1,5 +1,7 @@
 <?php
 
+use App\Kernel;
+use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
@@ -27,6 +29,7 @@ $responseFactory = new ResponseFactory();
 
 $pipe = new Zend\Stratigility\MiddlewarePipe();
 $pipe->pipe(new App\Middleware\SymfonyMiddleware($_SERVER['APP_ENV'], (bool)$_SERVER['APP_DEBUG']));
+$pipe->pipe(new App\Middleware\SilexMiddleware((bool)$_SERVER['APP_DEBUG']));
 $pipe->pipe(new App\Middleware\Yii2Middleware($_SERVER['APP_ENV'], (bool)$_SERVER['APP_DEBUG'], $responseFactory));
 $pipe->pipe(new App\Middleware\YiiMiddleware((bool)$_SERVER['APP_DEBUG'], $responseFactory));
 $pipe->pipe(new App\Middleware\NotFoundMiddleware($responseFactory));
