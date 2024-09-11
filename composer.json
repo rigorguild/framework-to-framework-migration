@@ -7,10 +7,15 @@
         "php": ">=8.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "laminas/laminas-stratigility": "^4.0",
+        "runtime/psr-17": "dev-main",
+        "slim/psr7": "^1.7",
+        "slim/slim": "4.*",
         "symfony/console": "7.1.*",
         "symfony/dotenv": "7.1.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "7.1.*",
+        "symfony/psr-http-message-bridge": "7.1.*",
         "symfony/runtime": "7.1.*",
         "symfony/yaml": "7.1.*"
     },
@@ -64,6 +69,12 @@
         "symfony": {
             "allow-contrib": false,
             "require": "7.1.*"
+        },
+        "runtime": {
+            "psr17_server_request_factory": "Slim\\Psr7\\Factory\\ServerRequestFactory",
+            "psr17_uri_factory": "Slim\\Psr7\\Factory\\UriFactory",
+            "psr17_uploaded_file_factory": "Slim\\Psr7\\Factory\\UploadedFileFactory",
+            "psr17_stream_factory": "Slim\\Psr7\\Factory\\StreamFactory"
         }
     }
 }
