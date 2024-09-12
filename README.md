@@ -18,6 +18,7 @@ Install the Symfony CLI first. Instructions 👉 **[here](https://symfony.com/do
 
 ## Available URLs
 
-* _/symfony_ -> Served by Symfony version 7.
+* _/symfony_ -> Served by Symfony version 7 👉 [`App\Middleware\HttpKernelMiddleware`](src/Middleware/HttpKernelMiddleware.php)
 * _/slim_ -> Served by Slim version 4 👉 [`App\Middleware\SlimMiddleware`](src/Middleware/SlimMiddleware.php)
-* Any URL that does not match any of these will return a 404 from Slim which is the last level in the middleware stack.
+* _/custom-framework_ -> Served by a middleware that invokes a custom legacy framework 👉 [`App\Middleware\LegacyMiddleware`](src/Middleware/LegacyFramework.php)
+* Any URL that does not match any of these will return a 404 from the custom legacy which is the last level in the middleware stack.
