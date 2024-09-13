@@ -16,7 +16,7 @@ use Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-final readonly class HttpKernelMiddleware implements MiddlewareInterface
+final readonly class SymfonyMiddleware implements MiddlewareInterface
 {
     public function __construct(
         public string $appEnv,
