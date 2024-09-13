@@ -19,7 +19,7 @@ Install the Symfony CLI first. Instructions 👉 **[here](https://symfony.com/do
 ## Available URLs
 
 * _/symfony_ -> Served by Symfony version 7 👉 [`App\Middleware\SymfonyMiddleware`](src/Middleware/SymfonyMiddleware.php)
-* * _/laravel_ -> Served by Laravel version 11 👉 [`App\Middleware\LaravelMiddleware`](src/Middleware/LaravelMiddleware.php)
+* _/laravel_ -> Served by Laravel version 11 👉 [`App\Middleware\LaravelMiddleware`](src/Middleware/LaravelMiddleware.php)
 * _/slim_ -> Served by Slim version 4 👉 [`App\Middleware\SlimMiddleware`](src/Middleware/SlimMiddleware.php)
 * _/custom-framework_ -> Served by a middleware that invokes a custom legacy framework 👉 [`App\Middleware\LegacyMiddleware`](src/Middleware/LegacyFramework.php)
 * Any URL that does not match any of these will return a 404 from the custom legacy which is the last level in the middleware stack.
